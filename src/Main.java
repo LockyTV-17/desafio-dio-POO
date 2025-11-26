@@ -7,11 +7,10 @@ public class Main {
         Curso curso1 = new Curso();
         Mentoria mentoria1 = new Mentoria();
         Curso curso2 = new Curso();
+        
         curso1.setTitulo("Curso Java");
         curso1.setDescricao("Descicao do curso de java");
         curso1.setCargahoraria(8);
-
-     
 
         curso2.setTitulo("Curso js");
         curso2.setDescricao("Descicao do curso de js");
