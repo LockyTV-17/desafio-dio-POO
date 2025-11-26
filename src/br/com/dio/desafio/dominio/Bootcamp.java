@@ -7,23 +7,32 @@ import java.util.Set;
 
 public class Bootcamp {
     private String nome;
-    private String descicao;
+    private String descricao;
     private final LocalDate dataInicio = LocalDate.now();
     private final LocalDate dataFInal = dataInicio.plusDays(45);
     private Set<Dev> devsIncritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
     
+    
+    // public Bootcamp(String nome, String descicao, Set<Dev> devsIncritos, Set<Conteudo> conteudos) {
+    //     this.nome = nome;
+    //     this.descicao = descicao;
+    //     this.devsIncritos = devsIncritos;
+    //     this.conteudos = conteudos;
+    // }
+
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getDescicao() {
-        return descicao;
+    public String getDescricao() {
+        return descricao;
     }
-    public void setDescicao(String descicao) {
-        this.descicao = descicao;
+    public void setDescricao(String descicao) {
+        this.descricao = descicao;
     }
     public LocalDate getDataInicio() {
         return dataInicio;
@@ -43,13 +52,13 @@ public class Bootcamp {
     public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
-    
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        result = prime * result + ((descicao == null) ? 0 : descicao.hashCode());
+        result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
         result = prime * result + ((dataInicio == null) ? 0 : dataInicio.hashCode());
         result = prime * result + ((dataFInal == null) ? 0 : dataFInal.hashCode());
         result = prime * result + ((devsIncritos == null) ? 0 : devsIncritos.hashCode());
@@ -70,10 +79,10 @@ public class Bootcamp {
                 return false;
         } else if (!nome.equals(other.nome))
             return false;
-        if (descicao == null) {
-            if (other.descicao != null)
+        if (descricao == null) {
+            if (other.descricao != null)
                 return false;
-        } else if (!descicao.equals(other.descicao))
+        } else if (!descricao.equals(other.descricao))
             return false;
         if (dataInicio == null) {
             if (other.dataInicio != null)
